@@ -1,6 +1,26 @@
 import { Fragment } from "react";
 import { profile, clients } from "../data/content.js";
 
+// A client's thumbnail: a silent looping video (like a GIF) if `video` is set, otherwise an image.
+function ClientThumb({ client }) {
+  if (client.video) {
+    return (
+      <video
+        className="client-thumb"
+        src={client.video}
+        poster={client.image}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+    );
+  }
+  if (client.image) return <img src={client.image} alt="" className="client-thumb" />;
+  return null;
+}
+
 export default function Home() {
   return (
     <>
@@ -11,15 +31,26 @@ export default function Home() {
 
       <section className="clients">
         <span className="clients-intro">{profile.clientsIntro}</span>
-        {clients.map((client, i) => (
-          <Fragment key={client.name}>
-            <span className="client">
-              {client.image && <img src={client.image} alt="" className="client-thumb" />}
+        {clients.map((client, i) => {
+          const content = (
+            <>
+              <ClientThumb client={client} />
               {client.name}
               {i < clients.length - 1 ? "," : ""}
-            </span>{" "}
-          </Fragment>
-        ))}
+            </>
+          );
+          return (
+            <Fragment key={client.name}>
+              {client.link ? (
+                <a className="client" href={client.link} target="_blank" rel="noreferrer">
+                  {content}
+                </a>
+              ) : (
+                <span className="client">{content}</span>
+              )}{" "}
+            </Fragment>
+          );
+        })}
       </section>
     </>
   );

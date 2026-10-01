@@ -7,7 +7,8 @@ export default function Nav({ vertical }) {
     <nav className={vertical ? "nav nav--vertical" : "nav"}>
       <NavLink to="/" end>{profile.name}</NavLink>
       <NavLink to="/projects">Selected projects</NavLink>
-      <NavLink to="/services">Services</NavLink>
+      <NavLink to="/services">Creative services</NavLink>
+      <NavLink to="/reel">BTS reel</NavLink>
     </nav>
   );
 }

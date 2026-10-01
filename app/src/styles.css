@@ -55,6 +55,7 @@ img {
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 90px;
   margin-bottom: 110px;
@@ -66,6 +67,7 @@ img {
 
 .nav--vertical {
   position: absolute;
+  z-index: 5;
   top: var(--gutter);
   left: var(--gutter);
   flex-direction: column;
@@ -97,7 +99,7 @@ img {
 .clients {
   margin-top: auto;
   padding-top: 200px;
-  line-height: 76px;
+  line-height: 68px;
 }
 
 .clients-intro {
@@ -108,16 +110,16 @@ img {
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
-  min-height: 52px;
+  min-height: 42px;
   gap: 10px;
   margin-right: 8px;
   white-space: nowrap;
 }
 
+/* Fixed height, natural width, so each photo keeps its own shape (no cropping). */
 .client-thumb {
-  width: 44px;
-  height: 52px;
-  object-fit: cover;
+  width: auto;
+  height: 42px;
   transition: transform 300ms ease;
 }
 
@@ -181,9 +183,15 @@ img {
   color: #fff;
   font: inherit;
   font-size: 15px;
+  transition: opacity 200ms ease;
+}
+
+.project-play.is-playing {
+  opacity: 0;
 }
 
 .project-video:hover .project-play {
+  opacity: 1;
   font-style: italic;
 }
 
@@ -193,6 +201,113 @@ img {
   font-size: 12px;
   color: #6b6b6b;
   text-align: center;
+}
+
+.project-number {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.project-link {
+  display: block;
+}
+
+.project-link:hover {
+  font-style: normal;
+}
+
+.project-link:hover figcaption,
+figcaption .project-link:hover {
+  color: var(--text);
+}
+
+/* ---------- Project page (layout after bygeorge-studio.com) ---------- */
+
+.case {
+  max-width: 1100px;
+  margin: -40px auto 0;
+}
+
+/* Title left, Services / With right; stays put while the images scroll. */
+.case-header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 10px 0 16px;
+  border-top: 1px solid var(--text);
+  background: var(--bg);
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.case-title {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.case-number {
+  font-weight: 400;
+}
+
+.case-meta p,
+.case-meta ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-with {
+  font-style: italic;
+}
+
+/* Two-column collage: large items fill their column, small ones take ~60% of it. */
+.case-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 32px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.case-item {
+  margin: 0;
+}
+
+.case-item--small {
+  width: 62%;
+}
+
+.case-media {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-media.project-video {
+  aspect-ratio: 16 / 9;
+}
+
+.case-item figcaption {
+  margin-top: 8px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 10px;
+  font-weight: 300;
+  color: #6b6b6b;
+}
+
+.case-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 90px;
+  padding-top: 10px;
+  border-top: 1px solid var(--text);
+  font-size: 13px;
 }
 
 /* ---------- Services ---------- */
@@ -245,6 +360,49 @@ img {
   opacity: 1;
 }
 
+/* ---------- Reel ---------- */
+
+.reel {
+  margin: 0 auto;
+}
+
+/* Vertical 9:16 like an Instagram reel; sized so the whole video fits on screen. */
+.reel-frame {
+  position: relative;
+  width: min(380px, 100%, calc((100vh - 220px) * 9 / 16));
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  background: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.reel-frame iframe,
+.reel-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #000;
+}
+
+.reel-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+.reel-caption {
+  margin: 24px 0 0;
+  font-size: 12px;
+  color: #6b6b6b;
+  text-align: center;
+}
+
 /* ---------- Contact ---------- */
 
 .contact {
@@ -271,6 +429,10 @@ img {
     --gutter: 20px;
   }
 
+  .nav {
+    gap: 12px 44px;
+  }
+
   .projects {
     grid-template-columns: repeat(2, 1fr);
     gap: 70px 24px;
@@ -292,7 +454,7 @@ img {
   }
 
   .nav {
-    gap: 24px;
+    gap: 12px 24px;
     margin-bottom: 60px;
   }
 
@@ -309,7 +471,7 @@ img {
 
   .clients {
     padding-top: 80px;
-    line-height: 60px;
+    line-height: 54px;
   }
 
   .client-thumb:hover {
@@ -328,6 +490,27 @@ img {
   .services {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
+  }
+
+  .case {
+    margin-top: -20px;
+  }
+
+  .case-header,
+  .case-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .case-header {
+    gap: 8px;
+  }
+
+  .case-item--small {
+    width: 70%;
+  }
+
+  .case-pager {
+    flex-wrap: wrap;
   }
 
   .service {

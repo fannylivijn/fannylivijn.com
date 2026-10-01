@@ -1,47 +1,36 @@
-import { useRef, useState } from "react";
-import { projects } from "../data/content.js";
+import { Link } from "react-router-dom";
+import ProjectVideo from "../components/ProjectVideo.jsx";
+import { projectList } from "../data/projectInfo.js";
 
-// Video tiles show the `image` as a poster until clicked, then play inline.
-function ProjectVideo({ src, poster, caption }) {
-  const videoRef = useRef(null);
-  const [playing, setPlaying] = useState(false);
-
-  function toggle() {
-    const video = videoRef.current;
-    if (video.paused) video.play();
-    else video.pause();
-  }
-
-  return (
-    <button type="button" className="project-media project-video" onClick={toggle} aria-label={playing ? "Pause video" : `Play video: ${caption}`}>
-      <video
-        ref={videoRef}
-        src={src}
-        poster={poster}
-        playsInline
-        loop
-        preload="metadata"
-        onPlay={() => setPlaying(true)}
-        onPause={() => setPlaying(false)}
-      />
-      {!playing && <span className="project-play">Play</span>}
-    </button>
-  );
-}
-
+// Image tiles and captions open the project page; video tiles play in place.
 export default function Projects() {
   return (
     <section className="projects">
-      {projects.map((project) => (
-        <figure key={project.video || project.image} className="project">
-          {project.video ? (
-            <ProjectVideo src={project.video} poster={project.image} caption={project.caption} />
-          ) : (
-            <img className="project-media" src={project.image} alt={project.caption} loading="lazy" />
-          )}
-          <figcaption>{project.caption}</figcaption>
-        </figure>
-      ))}
+      {projectList.map((project) => {
+        const href = `/projects/${project.slug}`;
+        return (
+          <figure key={project.slug} className="project">
+            {project.video ? (
+              <ProjectVideo
+                className="project-media"
+                src={project.video}
+                poster={project.image}
+                label={project.caption}
+              />
+            ) : (
+              <Link to={href} className="project-link">
+                <img className="project-media" src={project.image} alt={project.caption} loading="lazy" />
+              </Link>
+            )}
+            <figcaption>
+              <Link to={href} className="project-link">
+                <span className="project-number">({project.number})</span>
+                {project.caption}
+              </Link>
+            </figcaption>
+          </figure>
+        );
+      })}
     </section>
   );
 }
