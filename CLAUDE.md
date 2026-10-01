@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Portfolio website for **Fanny Livijn** (Creative, Content Strategist & Art Director). The layout is modeled on https://www.andreamena.com/; project pages follow https://bygeorge-studio.com/. Live at **https://fannylivijn.github.io/fannylivijn.com/** (GitHub repo `fannylivijn/fannylivijn.com`).
+Portfolio website for **Fanny Livijn** (Creative, Content Strategist & Art Director). The layout is modeled on https://www.andreamena.com/; project pages follow https://bygeorge-studio.com/. Live at **https://fannylivijn.com** (GitHub repo `fannylivijn/fannylivijn.com`; the old `fannylivijn.github.io/fannylivijn.com/` address redirects there).
 
 ## Commands
 
@@ -52,9 +52,9 @@ Still placeholder, to fill in when Fanny sends content:
 
 ## Domain: fannylivijn.com
 
-- Bought through **Cargo** (registrar eNom, nameservers `ns1/ns2.cargo.site`); it currently shows a password-protected Cargo page.
-- **Expires 2026-11-12.** Remind Fanny before then. She plans to connect it later and is considering moving it to a cheaper registrar (Cloudflare or Porkbun). A transfer takes up to a week, so start by late October.
-- To connect it: at the DNS host add A records `@` → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 and CNAME `www` → `fannylivijn.github.io`; then in the repo's Settings → Pages set the custom domain to `fannylivijn.com` and tick Enforce HTTPS.
+- Connected to GitHub Pages on 2026-10-01: A records `@` → 185.199.108.153 / .109 / .110 / .111.153 and CNAME `www` → `fannylivijn.github.io`; the custom domain is set in the repo's Settings → Pages.
+- Still registered through **Cargo** (registrar eNom, nameservers `ns1/ns2.cargo.site`, DNS edited at cargo.site → Account → Domain Names → ••• → Edit DNS). Cargo lists it as **cancelled, expiring 2026-10-28**.
+- Moving it to **Cloudflare**: the Cloudflare zone already exists with the same records (DNS only), nameservers `armfazh.ns.cloudflare.com` / `paris.ns.cloudflare.com`. Cargo has no self-serve option for nameservers or the transfer code, so Fanny asked Cargo support for both on 2026-10-01. Once the code arrives: Cloudflare → Domain Registration → Transfer Domains. This must finish before 2026-10-28.
 
 ## Deployment
 
