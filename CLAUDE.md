@@ -42,12 +42,11 @@ React + Vite SPA, minimal serif (Times) editorial layout on white.
 Done: name, tagline, brand list (27 entries), most brand thumbnails, project captions 1–6, numbered project tiles, project pages, BTS reel, menu names.
 
 Still placeholder, to fill in when Fanny sends content:
-- **Bio** under the tagline (`profile.bio`) is still sample text.
 - **Contact links** (`contact` in `content.js`) still point to `yourhandle`, `yourprofile` and `hello@example.com`.
 - **Creative services list** is still the sample list from the reference site.
 - **Brand thumbnails** still grey placeholders: Prune Imports, TIER, The North Face x One Show Club.
-- **Project tiles** 1, 2, 3, 4 and 6 still use grey `project-N.svg` images; projects 7–9 are entirely placeholders ("Client Six/Seven/Eight").
-- **Project pages**: only Zara Larsson has a `gallery` (with placeholder images); the Robyn page needs a proper `title` / `services`, since its caption splits into title "Robyn".
+- **Project tiles** 1, 2, 3, 4, 6 and 8 still use grey `project-N.svg` images. Copy for projects (bio, write-ups, Vogue Scandinavia and The North Face) came from Fanny's old Webflow site, saved in her Claude doc "fannylivijn.com — Site Copy"; its images live on cdn.prod.website-files.com but the URLs weren't saved (only the Vogue one was known).
+- **Project pages**: only Zara Larsson has a `gallery` (with placeholder images). Projects can set `text` (paragraphs, `**bold**`), `client` and `year`, shown under the header.
 - Unused files kept on purpose: `images/elle-magazine.jpg`, `images/robyn-sexistential.jpg` (earlier photos Fanny may reuse).
 
 ## Domain: fannylivijn.com

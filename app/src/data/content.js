@@ -4,7 +4,7 @@
 export const profile = {
   name: "Fanny Livijn",
   tagline: "Creative, Content Strategist & Art Director | Where music, fashion and social meet",
-  bio: "I am a designer and developer specialized in digital products and brand. My work combines strategy and craftsmanship to shape the way people interact with ideas and spaces.",
+  bio: "Social Creative & Content Strategist building culturally relevant brands for the zeitgeist generation. Based between Stockholm and Mexico City, I develop digital-first campaigns and social-led strategy & creative concepts across music, fashion, culture and lifestyle. 5+ years turning social moments into brand movements.",
   clientsIntro: "Brands and projects I’ve worked with:",
 };
 
@@ -54,12 +54,27 @@ export const clients = [
 //     { image: "images/a.jpg", caption: "Music video still", size: "large" },
 //     { video: "videos/b.mp4", caption: "BTS", size: "small" },
 //   ]                                         size is "large" or "small"
+//   text: ["Paragraph", "Paragraph"]          the write-up under the header; wrap
+//                                             words in **double stars** for bold
+//   client: "Name", year: "2023"              shown in a line under the text
 export const projects = [
-  { image: "images/project-1.svg", caption: "Spotify Sweden — Conceptualization, content direction and social media strategy for TikTok channel" },
+  {
+    image: "images/project-1.svg",
+    caption: "Spotify Sweden — Conceptualization, content direction and social media strategy for TikTok channel",
+    title: "Spotify Sweden — What Floats Ur Boat?",
+    services: ["Creative", "Art direction", "TikTok strategy"],
+    client: "Spotify Sweden",
+    year: "2023",
+    text: [
+      "When Spotify Sweden set out to make waves on TikTok, we knew we had to break through with something Gen Z wouldn’t scroll past. Instead of leaning on the standard Q&A interview format, we gave it a bold twist. A trampoline boat drifting across a pond at the Way Out West Festival. At the helm was Swedish TikTok star Annie Samuelsson, steering guests like Bianca Ingrosso and Edvin Ryding through playful, unpredictable interviews.",
+      "Within the first week, the channel racked up **20,000 organic followers** and more than **3 million views**, firmly anchoring Spotify’s TikTok presence with a splash.",
+    ],
+  },
   {
     image: "images/project-2.svg",
     caption: "Zara Larsson — Music video, styling",
     services: ["Music video", "Styling"],
+    year: "2024",
     gallery: [
       { image: "images/zara-larsson.jpg", caption: "“You Love Who You Love” music video still", size: "large" },
       { image: "images/project-2.svg", caption: "Placeholder — add your image", size: "small" },
@@ -68,12 +83,57 @@ export const projects = [
     ],
   },
   { image: "images/project-3.svg", caption: "Prune Imports — Website design and brand development" },
-  { image: "images/project-4.svg", caption: "Way Out West Festival x Yung Lean — Conceptualization and social media strategy" },
-  { video: "videos/robyn-blow-my-mind.mp4", caption: "Robyn — Sexistential Album, stylist assistant to Naomi Itkes" },
-  { image: "images/project-6.svg", caption: "TIER — Conceptualization, content direction and social media strategy" },
-  { image: "images/project-7.svg", caption: "Client Six — Exhibition curation and catalogue texts." },
-  { image: "images/project-8.svg", caption: "Client Seven — Website design and development." },
-  { image: "images/project-9.svg", caption: "Client Eight — Ongoing content direction." },
+  {
+    image: "images/project-4.svg",
+    caption: "Way Out West Festival x Yung Lean — Conceptualization and social media strategy",
+    title: "Way Out West Festival — The WOW 22 Sound",
+    services: ["Concept development", "TikTok strategy"],
+    client: "Way Out West Festival / Luger Sweden",
+    year: "2023",
+    text: [
+      "To bring a younger crowd to Way Out West festival, we turned Yung Lean’s cult classic “Ginseng Strip” into WOW 22’s unofficial TikTok anthem. We activated creators across the full festival journey, building anticipation beforehand, capturing the energy during, and extending the buzz afterward.",
+      "The branded sound didn’t just amplify our paid content; it sparked genuine momentum. The results: **7.4 million views**, **181 user-generated videos** and **60% organic reach**. A proof that the festival resonated far beyond our initial push.",
+    ],
+  },
+  {
+    video: "videos/robyn-blow-my-mind.mp4",
+    caption: "Robyn — Sexistential Album, stylist assistant to Naomi Itkes",
+    title: "Robyn — Sexistential Album",
+    services: ["Stylist assistant to Naomi Itkes"],
+  },
+  {
+    image: "images/project-6.svg",
+    caption: "TIER — Conceptualization, content direction and social media strategy",
+    title: "TIER — The Zoologists",
+    services: ["Content", "Strategy"],
+    client: "TIER",
+    year: "2023",
+    text: [
+      "To stand out from competitors, TIER set out to spotlight its commitment to sustainability in a fresh, unconventional way. For the launch of its TikTok channel, we crafted a content strategy built around four distinct personas, quirky zoologists based in different cities.",
+      "Through their lens, everyday human habits were reimagined as animal behaviors, turning sustainability into something both relatable and entertaining.",
+    ],
+  },
+  {
+    image: "images/vogue-scandinavia-punk.jpg",
+    caption: "Vogue Scandinavia — Punk editorial, stylist assistant to Maria Barsoum",
+    title: "Vogue Scandinavia — Punk Editorial",
+    services: ["Styling"],
+    with: "Maria Barsoum (stylist), Alex Rozniata (photographer)",
+    year: "2024",
+    text: ["Stylist assistant for Maria Barsoum."],
+  },
+  {
+    image: "images/project-8.svg",
+    caption: "The North Face — The Everyday Explorer, copywriting",
+    title: "The North Face — The Everyday Explorer",
+    services: ["Copywriting"],
+    client: "Student case",
+    year: "2020",
+    text: [
+      "In order to engage and motivate the upcoming generation of outdoor enthusiasts, we developed a gamified extension to Google Maps. This feature provides tailored recommendations for destinations to explore, while enabling users to accumulate reward points for their adventures. Reward points which could be redeemed in The North Face store for discounts.",
+      "**Awarded Gold at The One Show Young Ones.**",
+    ],
+  },
 ];
 
 export const services = [

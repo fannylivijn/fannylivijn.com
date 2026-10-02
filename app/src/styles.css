@@ -266,6 +266,25 @@ figcaption .project-link:hover {
 }
 
 /* Two-column collage: large items fill their column, small ones take ~60% of it. */
+.case-text {
+  max-width: 620px;
+  margin: 24px 0 40px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.case-text p {
+  margin: 0 0 14px;
+}
+
+.case-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  color: #6b6b6b;
+  font-size: 13px;
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
