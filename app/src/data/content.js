@@ -137,21 +137,20 @@ export const projects = [
 ];
 
 export const services = [
-  "Editing",
+  "Creative direction",
+  "Art direction",
+  "Content strategy",
+  "Concept development",
   "Campaign strategy",
-  "Creative content development",
-  "Creative strategy & direction",
-  "Conceptualization",
-  "Brand identity",
-  "Trend forecasting",
+  "Social media & TikTok strategy",
+  "Content production",
+  "Styling",
   "Copywriting",
-  "Interviewing",
+  "Brand development",
+  "Website design",
   "Brand activations",
-  "Social media consultancy",
-  "Cultural research",
-  "PR & communications",
-  "Artist curation",
-  "Storytelling",
+  "Talent & artist collaborations",
+  "Trend research",
 ];
 
 // BTS reel page. Set ONE of these:

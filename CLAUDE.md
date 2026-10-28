@@ -25,7 +25,7 @@ React + Vite SPA, minimal serif (Times) editorial layout on white.
 - **Home** (`pages/Home.jsx`): tagline, bio, then an inline brand list. A client can have an `image`, or a `video` (silent autoplay loop, like a GIF), plus an optional `link`. Thumbnails are a fixed 42px high with natural width, so photos are never cropped.
 - **Selected projects** (`pages/Projects.jsx`): a 3-column grid of tiles with an auto-numbered "(N)" above each caption. Image tiles and captions link to the project page; video tiles play in place (`components/ProjectVideo.jsx`, Play/Pause label).
 - **Project page** (`pages/ProjectPage.jsx`, data from `data/projectInfo.js`): sticky header (bold title left, "Services:" / italic "With:" right), a two-column collage (`gallery` items with `size: "large" | "small"`, monospace captions), and a prev / all / next pager. Title and services are derived from the caption ("Title — services") unless the project sets `title` / `services` / `with` / `gallery`.
-- **Creative services** (`pages/Services.jsx`): 15 big numbers that swap to the service name on hover/focus.
+- **Creative services** (`pages/Services.jsx`): big numbers (one per service) that swap to the service name on hover/focus.
 - **BTS reel** (`pages/Reel.jsx`): a vertical 9:16 (Instagram reel) frame, 10px rounded corners, muted autoplay loop with controls.
 - **Styling**: single `styles.css` with CSS custom properties; breakpoints at 900px and 560px.
 
@@ -39,10 +39,9 @@ React + Vite SPA, minimal serif (Times) editorial layout on white.
 
 ## Current status (as of 2026-10-01)
 
-Done: name, tagline, brand list (27 entries), most brand thumbnails, project captions 1–6, numbered project tiles, project pages, BTS reel, menu names, contact links.
+Done: name, tagline, brand list (27 entries), most brand thumbnails, project captions 1–6, numbered project tiles, project pages, BTS reel, menu names, contact links, creative services (14).
 
 Still placeholder, to fill in when Fanny sends content:
-- **Creative services list** is still the sample list from the reference site.
 - **Brand thumbnails** still grey placeholders: Prune Imports, TIER, The North Face x One Show Club.
 - **Project tiles** 1, 2, 3, 4, 6 and 8 still use grey `project-N.svg` images. Copy for projects (bio, write-ups, Vogue Scandinavia and The North Face) came from Fanny's old Webflow site, saved in her Claude doc "fannylivijn.com — Site Copy"; its images live on cdn.prod.website-files.com but the URLs weren't saved (only the Vogue one was known).
 - **Project pages**: only Zara Larsson has a `gallery` (with placeholder images). Projects can set `text` (paragraphs, `**bold**`), `client` and `year`, shown under the header.
