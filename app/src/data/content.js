@@ -105,6 +105,9 @@ export const projects = [
     ],
     gallery: [
       { image: "images/way-out-west-tiktok.jpg", caption: "Creator videos in the Way Out West 2022 TikTok playlist", size: "wide" },
+      { embed: "https://www.tiktok.com/player/v1/7113926203748158726?description=0&music_info=0", caption: "TikTok by @pastabianxo", size: "large" },
+      { embed: "https://www.tiktok.com/player/v1/7131683851847437595?description=0&music_info=0", caption: "TikTok by @mrsjourney", size: "large" },
+      { embed: "https://www.tiktok.com/player/v1/7131388642613906694?description=0&music_info=0", caption: "TikTok by @cissiv", size: "large" },
     ],
   },
   {

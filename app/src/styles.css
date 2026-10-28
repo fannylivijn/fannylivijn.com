@@ -321,6 +321,11 @@ figcaption .project-link:hover {
   border: 0;
 }
 
+/* TikTok videos are vertical. */
+.case-embed--vertical {
+  aspect-ratio: 9 / 16;
+}
+
 .case-item figcaption {
   margin-top: 8px;
   font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
