@@ -39,10 +39,9 @@ React + Vite SPA, minimal serif (Times) editorial layout on white.
 
 ## Current status (as of 2026-10-01)
 
-Done: name, tagline, brand list (27 entries), most brand thumbnails, project captions 1–6, numbered project tiles, project pages, BTS reel, menu names.
+Done: name, tagline, brand list (27 entries), most brand thumbnails, project captions 1–6, numbered project tiles, project pages, BTS reel, menu names, contact links.
 
 Still placeholder, to fill in when Fanny sends content:
-- **Contact links** (`contact` in `content.js`) still point to `yourhandle`, `yourprofile` and `hello@example.com`.
 - **Creative services list** is still the sample list from the reference site.
 - **Brand thumbnails** still grey placeholders: Prune Imports, TIER, The North Face x One Show Club.
 - **Project tiles** 1, 2, 3, 4, 6 and 8 still use grey `project-N.svg` images. Copy for projects (bio, write-ups, Vogue Scandinavia and The North Face) came from Fanny's old Webflow site, saved in her Claude doc "fannylivijn.com — Site Copy"; its images live on cdn.prod.website-files.com but the URLs weren't saved (only the Vogue one was known).
@@ -52,8 +51,8 @@ Still placeholder, to fill in when Fanny sends content:
 ## Domain: fannylivijn.com
 
 - Connected to GitHub Pages on 2026-10-01: A records `@` → 185.199.108.153 / .109 / .110 / .111.153 and CNAME `www` → `fannylivijn.github.io`; the custom domain is set in the repo's Settings → Pages.
-- Still registered through **Cargo** (registrar eNom, nameservers `ns1/ns2.cargo.site`, DNS edited at cargo.site → Account → Domain Names → ••• → Edit DNS). Cargo lists it as **cancelled, expiring 2026-10-28**.
-- Moving it to **Cloudflare**: the Cloudflare zone already exists with the same records (DNS only), nameservers `armfazh.ns.cloudflare.com` / `paris.ns.cloudflare.com`. Cargo has no self-serve option for nameservers or the transfer code, so Fanny asked Cargo support for both on 2026-10-01. Once the code arrives: Cloudflare → Domain Registration → Transfer Domains. This must finish before 2026-10-28.
+- Still registered through **Cargo** (registrar eNom, nameservers `ns1/ns2.cargo.site`, DNS edited at cargo.site → Account → Domain Names → ••• → Edit DNS). Cargo lists it as **cancelled, expiring 2026-11-12** (confirmed by whois on 2026-10-28).
+- Moving it to **Cloudflare**: the Cloudflare zone already exists with the same records (DNS only), nameservers `armfazh.ns.cloudflare.com` / `paris.ns.cloudflare.com`. Cargo has no self-serve option for nameservers or the transfer code, so Fanny asked Cargo support for both on 2026-10-01. Once the code arrives: Cloudflare → Domain Registration → Transfer Domains. This must finish before 2026-11-12. Cargo sent the transfer code on 2026-10-28 (not saved here).
 
 ## Deployment
 
