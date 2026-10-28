@@ -77,6 +77,7 @@ export const projects = [
     image: "images/zara-larsson-phone.jpg",
     caption: "Zara Larsson — Music video, styling",
     services: ["Music video", "Styling"],
+    with: "Naomi Itkes (stylist)",
     text: [
       "“You Love Who You Love” is a song about destructive relationships and the fear of letting go. It speaks to the friend who keeps going back to the wrong person, with Zara’s message that enough is enough.",
       "In the styling, we wanted every character to feel impulsive. The looks draw on current Gen Z trends, but also on the slightly unhinged choices all of us make when we change ourselves for the one we love.",
