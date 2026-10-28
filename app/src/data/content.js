@@ -75,7 +75,7 @@ export const projects = [
   },
   {
     image: "images/zara-larsson-phone.jpg",
-    caption: "Zara Larsson — Music video, styling",
+    caption: "Zara Larsson — Music video, co-styling",
     title: "Zara Larsson — You Love Who You Love // Music video",
     slug: "zara-larsson",
     services: ["Music video", "Styling"],
