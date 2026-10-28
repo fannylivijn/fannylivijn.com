@@ -79,7 +79,7 @@ export const projects = [
     services: ["Music video", "Styling"],
     text: [
       "“You Love Who You Love” is a song about destructive relationships and the fear of letting go. It speaks to the friend who keeps going back to the wrong person, with Zara’s message that enough is enough.",
-      "In the styling, we wanted every character to feel impulsive. The looks draw on current Gen Z trends, but also on the slightly unhinged choices all of us make when we change ourselves to belong.",
+      "In the styling, we wanted every character to feel impulsive. The looks draw on current Gen Z trends, but also on the slightly unhinged choices all of us make when we change ourselves for the one we love.",
     ],
     year: "2024",
     gallery: [
