@@ -78,7 +78,7 @@ export const projects = [
     caption: "Zara Larsson — Music video, co-styling",
     title: "Zara Larsson — You Love Who You Love // Music video",
     slug: "zara-larsson",
-    services: ["Music video", "Styling"],
+    services: ["Music video", "Co-styling"],
     with: "Naomi Itkes (stylist)",
     text: [
       "“You Love Who You Love” is a song about destructive relationships and the fear of letting go. It speaks to the friend who keeps going back to the wrong person, with Zara’s message that enough is enough.",
