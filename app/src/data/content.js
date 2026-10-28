@@ -84,7 +84,6 @@ export const projects = [
     year: "2024",
     gallery: [
       { embed: "https://www.youtube-nocookie.com/embed/YBNYVArkExQ", caption: "“You Love Who You Love” official music video", size: "wide" },
-      { image: "images/zara-larsson.jpg", caption: "“You Love Who You Love” music video still", size: "large" },
       { image: "images/zara-larsson-phone.jpg", caption: "Behind the scenes", size: "small" },
       { image: "images/zara-larsson-leather.jpg", caption: "Behind the scenes", size: "small" },
     ],
