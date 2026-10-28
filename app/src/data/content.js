@@ -103,6 +103,9 @@ export const projects = [
       "To bring a younger crowd to Way Out West festival, we turned Yung Lean’s cult classic “Ginseng Strip” into WOW 22’s unofficial TikTok anthem. We activated creators across the full festival journey, building anticipation beforehand, capturing the energy during, and extending the buzz afterward.",
       "The branded sound didn’t just amplify our paid content; it sparked genuine momentum. The results: **7.4 million views**, **181 user-generated videos** and **60% organic reach**. A proof that the festival resonated far beyond our initial push.",
     ],
+    gallery: [
+      { image: "images/way-out-west-tiktok.jpg", caption: "Creator videos in the Way Out West 2022 TikTok playlist", size: "wide" },
+    ],
   },
   {
     video: "videos/robyn-blow-my-mind.mp4",
