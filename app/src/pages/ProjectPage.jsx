@@ -51,7 +51,17 @@ export default function ProjectPage() {
       <div className="case-gallery">
         {project.gallery.map((item, i) => (
           <figure key={i} className={`case-item case-item--${item.size || "large"}`}>
-            {item.video ? (
+            {item.embed ? (
+              <iframe
+                className="case-media case-embed"
+                src={item.embed}
+                title={item.caption || project.title}
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                loading="lazy"
+              />
+            ) : item.video ? (
               <ProjectVideo
                 className="case-media"
                 src={item.video}

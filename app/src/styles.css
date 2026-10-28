@@ -311,6 +311,16 @@ figcaption .project-link:hover {
   aspect-ratio: 16 / 9;
 }
 
+/* A "wide" item spans both columns (used for YouTube/Vimeo embeds). */
+.case-item--wide {
+  grid-column: 1 / -1;
+}
+
+.case-embed {
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
 .case-item figcaption {
   margin-top: 8px;
   font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;

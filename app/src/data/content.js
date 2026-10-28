@@ -53,7 +53,10 @@ export const clients = [
 //   gallery: [                                the images/videos on the project page
 //     { image: "images/a.jpg", caption: "Music video still", size: "large" },
 //     { video: "videos/b.mp4", caption: "BTS", size: "small" },
-//   ]                                         size is "large" or "small"
+//     { embed: "https://www.youtube-nocookie.com/embed/VIDEO_ID", size: "wide" },
+//   ]                                         size is "large", "small" or "wide"
+//                                             (wide spans both columns; use it for
+//                                             YouTube/Vimeo embeds)
 //   text: ["Paragraph", "Paragraph"]          the write-up under the header; wrap
 //                                             words in **double stars** for bold
 //   client: "Name", year: "2023"              shown in a line under the text
@@ -80,6 +83,7 @@ export const projects = [
     ],
     year: "2024",
     gallery: [
+      { embed: "https://www.youtube-nocookie.com/embed/YBNYVArkExQ", caption: "“You Love Who You Love” official music video", size: "wide" },
       { image: "images/zara-larsson.jpg", caption: "“You Love Who You Love” music video still", size: "large" },
       { image: "images/zara-larsson-phone.jpg", caption: "Behind the scenes", size: "small" },
       { image: "images/zara-larsson-leather.jpg", caption: "Behind the scenes", size: "small" },
