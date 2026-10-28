@@ -74,6 +74,10 @@ export const projects = [
     image: "images/zara-larsson-phone.jpg",
     caption: "Zara Larsson — Music video, styling",
     services: ["Music video", "Styling"],
+    text: [
+      "Placeholder text: styling for Zara Larsson’s music video “You Love Who You Love”. A short write-up about the idea, the looks and the collaboration will go here.",
+      "A second paragraph can describe the result, for example the reach or how the video was received.",
+    ],
     year: "2024",
     gallery: [
       { image: "images/zara-larsson.jpg", caption: "“You Love Who You Love” music video still", size: "large" },
