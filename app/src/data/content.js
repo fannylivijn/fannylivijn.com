@@ -78,8 +78,8 @@ export const projects = [
     caption: "Zara Larsson — Music video, styling",
     services: ["Music video", "Styling"],
     text: [
-      "Placeholder text: styling for Zara Larsson’s music video “You Love Who You Love”. A short write-up about the idea, the looks and the collaboration will go here.",
-      "A second paragraph can describe the result, for example the reach or how the video was received.",
+      "“You Love Who You Love” is a song about destructive relationships and the fear of letting go. It speaks to the friend who keeps going back to the wrong person, with Zara’s message that enough is enough.",
+      "In the styling, we wanted every character to feel impulsive. The looks draw on current Gen Z trends, but also on the slightly unhinged choices all of us make when we change ourselves to belong.",
     ],
     year: "2024",
     gallery: [
