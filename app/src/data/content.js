@@ -54,8 +54,8 @@ export const clients = [
 //     { image: "images/a.jpg", caption: "Music video still", size: "large" },
 //     { video: "videos/b.mp4", caption: "BTS", size: "small" },
 //     { embed: "https://www.youtube-nocookie.com/embed/VIDEO_ID", size: "wide" },
-//   ]                                         size is "large", "small" or "wide"
-//                                             (wide spans both columns; use it for
+//   ]                                         size is "large", "small", "third" or "wide"
+//                                             (third = three in a row; wide spans both columns, for
 //                                             YouTube/Vimeo embeds)
 //   text: ["Paragraph", "Paragraph"]          the write-up under the header; wrap
 //                                             words in **double stars** for bold
@@ -105,9 +105,9 @@ export const projects = [
     ],
     gallery: [
       { image: "images/way-out-west-tiktok.jpg", caption: "Creator videos in the Way Out West 2022 TikTok playlist", size: "wide" },
-      { embed: "https://www.tiktok.com/player/v1/7113926203748158726?description=0&music_info=0", caption: "TikTok by @pastabianxo", size: "large" },
-      { embed: "https://www.tiktok.com/player/v1/7131683851847437595?description=0&music_info=0", caption: "TikTok by @mrsjourney", size: "large" },
-      { embed: "https://www.tiktok.com/player/v1/7131388642613906694?description=0&music_info=0", caption: "TikTok by @cissiv", size: "large" },
+      { embed: "https://www.tiktok.com/player/v1/7113926203748158726?description=0&music_info=0", caption: "TikTok by @pastabianxo", size: "third" },
+      { embed: "https://www.tiktok.com/player/v1/7131683851847437595?description=0&music_info=0", caption: "TikTok by @mrsjourney", size: "third" },
+      { embed: "https://www.tiktok.com/player/v1/7131388642613906694?description=0&music_info=0", caption: "TikTok by @cissiv", size: "third" },
     ],
   },
   {

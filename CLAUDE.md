@@ -44,7 +44,7 @@ Done: name, tagline, brand list (27 entries), most brand thumbnails, project cap
 Still placeholder, to fill in when Fanny sends content:
 - **Brand thumbnails** still grey placeholders: Prune Imports, TIER, The North Face x One Show Club.
 - **Project tiles** 1, 3, 6 and 8 still use grey `project-N.svg` images. Copy for projects (bio, write-ups, Vogue Scandinavia and The North Face) came from Fanny's old Webflow site, saved in her Claude doc "fannylivijn.com — Site Copy"; its images live on cdn.prod.website-files.com but the URLs weren't saved (only the Vogue one was known).
-- **Project pages**: only Zara Larsson has a `gallery` (YouTube embed of the music video + two film photos from Zara's Instagram post C3NiMVsNUPJ, added 2026-10-28). Gallery items can be `image`, `video` or `embed` (YouTube/Vimeo, use `size: "wide"` to span both columns; TikTok `https://www.tiktok.com/player/v1/VIDEO_ID` embeds show vertical 9:16). Projects can set `text` (paragraphs, `**bold**`), `client` and `year`, shown under the header.
+- **Project pages**: only Zara Larsson has a `gallery` (YouTube embed of the music video + two film photos from Zara's Instagram post C3NiMVsNUPJ, added 2026-10-28). Gallery items can be `image`, `video` or `embed` (YouTube/Vimeo, use `size: "wide"` to span both columns, `size: "third"` for three in a row; TikTok `https://www.tiktok.com/player/v1/VIDEO_ID` embeds show vertical 9:16). Projects can set `text` (paragraphs, `**bold**`), `client` and `year`, shown under the header.
 - Unused files kept on purpose: `images/elle-magazine.jpg`, `images/robyn-sexistential.jpg` (earlier photos Fanny may reuse).
 
 ## Domain: fannylivijn.com

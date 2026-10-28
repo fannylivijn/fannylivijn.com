@@ -285,9 +285,10 @@ figcaption .project-link:hover {
   font-size: 13px;
 }
 
+/* Six columns so items can sit two (large/small), three ("third") or one ("wide") to a row. */
 .case-gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   gap: 48px 32px;
   align-items: start;
   margin-top: 24px;
@@ -295,6 +296,11 @@ figcaption .project-link:hover {
 
 .case-item {
   margin: 0;
+  grid-column: span 3;
+}
+
+.case-item--third {
+  grid-column: span 2;
 }
 
 .case-item--small {
@@ -533,6 +539,10 @@ figcaption .project-link:hover {
   .case-header,
   .case-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .case-item {
+    grid-column: 1 / -1;
   }
 
   .case-header {
