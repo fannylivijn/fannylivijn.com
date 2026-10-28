@@ -71,15 +71,14 @@ export const projects = [
     ],
   },
   {
-    image: "images/project-2.svg",
+    image: "images/zara-larsson-phone.jpg",
     caption: "Zara Larsson — Music video, styling",
     services: ["Music video", "Styling"],
     year: "2024",
     gallery: [
       { image: "images/zara-larsson.jpg", caption: "“You Love Who You Love” music video still", size: "large" },
-      { image: "images/project-2.svg", caption: "Placeholder — add your image", size: "small" },
-      { image: "images/project-7.svg", caption: "Placeholder — add your image", size: "small" },
-      { image: "images/project-8.svg", caption: "Placeholder — add your image", size: "large" },
+      { image: "images/zara-larsson-phone.jpg", caption: "Behind the scenes", size: "small" },
+      { image: "images/zara-larsson-leather.jpg", caption: "Behind the scenes", size: "small" },
     ],
   },
   { image: "images/project-3.svg", caption: "Prune Imports — Website design and brand development" },
