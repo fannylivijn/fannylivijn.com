@@ -3,7 +3,7 @@
 
 export const profile = {
   name: "Fanny Livijn",
-  tagline: "Creative, Content Strategist & Art Director | Where music, fashion and social meet",
+  tagline: "Creative, Content Strategist & Art Director | Music + Fashion + Socials",
   bio: "Social Creative & Content Strategist building culturally relevant brands for the zeitgeist generation. Based between Stockholm and Mexico City, I develop digital-first campaigns and social-led strategy & creative concepts across music, fashion, culture and lifestyle. 5+ years turning social moments into brand movements.",
   clientsIntro: "Brands and projects I’ve worked with:",
 };
