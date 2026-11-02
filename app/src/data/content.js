@@ -98,7 +98,7 @@ export const projects = [
       { image: "images/zara-larsson-leather.jpg", caption: "Behind the scenes", size: "small" },
     ],
   },
-  { image: "images/project-3.svg", caption: "Prune Imports — Website design and brand development" },
+  { image: "images/coming-soon.svg", caption: "Prune Imports — Website design and brand development" },
   {
     image: "images/way-out-west-yung-lean-poster.jpg",
     caption: "Way Out West Festival x Yung Lean — Conceptualization and social media strategy",
