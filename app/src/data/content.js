@@ -181,7 +181,7 @@ export const reel = {
 };
 
 export const contact = [
-  { label: "DM me", href: "https://www.instagram.com/fannylivijn/" },
+  { label: "DM me 💫", href: "https://www.instagram.com/fannylivijn/" },
   { label: "Look deeper", href: "https://www.linkedin.com/in/fanny-livijn-b7bb8b11b/" },
   { label: "Write to me", href: "mailto:fanny.livijn@gmail.com" },
 ];
