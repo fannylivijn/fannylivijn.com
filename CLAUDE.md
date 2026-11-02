@@ -50,8 +50,7 @@ Still placeholder, to fill in when Fanny sends content:
 ## Domain: fannylivijn.com
 
 - Connected to GitHub Pages on 2026-10-01: A records `@` → 185.199.108.153 / .109 / .110 / .111.153 and CNAME `www` → `fannylivijn.github.io`; the custom domain is set in the repo's Settings → Pages.
-- Still registered through **Cargo** (registrar eNom, nameservers `ns1/ns2.cargo.site`, DNS edited at cargo.site → Account → Domain Names → ••• → Edit DNS). Cargo lists it as **cancelled, expiring 2026-11-12** (confirmed by whois on 2026-10-28).
-- Moving it to **Cloudflare**: the Cloudflare zone already exists with the same records (DNS only), nameservers `armfazh.ns.cloudflare.com` / `paris.ns.cloudflare.com`. Cargo has no self-serve option for nameservers or the transfer code, so Fanny asked Cargo support for both on 2026-10-01. Once the code arrives: Cloudflare → Domain Registration → Transfer Domains. This must finish before 2026-11-12. Cargo sent the transfer code on 2026-10-28 (not saved here).
+- Transferred from Cargo to **Porkbun** (done by 2026-11-02, expires 2027-11-12). WHOIS still lists Cargo's nameservers (`ns1/ns2.cargo.site`), which still answer for now. Next step: in Porkbun switch the nameservers to Cloudflare (`armfazh.ns.cloudflare.com` / `paris.ns.cloudflare.com`; that zone already has the same records, DNS only).
 
 ## Deployment
 
