@@ -33,7 +33,7 @@ export const clients = [
   { name: "Plan International" },
   { name: "YouTube Shorts" },
   { name: "Ann-Sofie Back – Go As You Please Exhibition x Liljevalchs", image: "images/ann-sofie-back.jpg" },
-  { name: "TIER", image: "images/client-2.svg" },
+  { name: "TIER" },
   { name: "Shore Studio Series" },
   { name: "The North Face x One Show Club", video: "videos/tnf-everyday-explorer-1s.mp4" },
   { name: "Petra Fagerström x SFC Presentation", image: "images/petra-fagerstrom-sfc.jpg" },

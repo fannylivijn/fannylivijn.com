@@ -42,7 +42,7 @@ React + Vite SPA, minimal serif (Times) editorial layout on white.
 Done: name, tagline, brand list (27 entries), most brand thumbnails, project captions 1–6, numbered project tiles, project pages, BTS reel, menu names, contact links, creative services (14).
 
 Still placeholder, to fill in when Fanny sends content:
-- **Brand thumbnails** still grey placeholders: Prune Imports, TIER.
+- **Brand thumbnails**: Prune Imports still a grey placeholder; TIER shows as text only for now (Fanny removed its placeholder 2026-11-02).
 - **Project tile** 3 (Prune Imports) still uses a grey `project-3.svg` image. Copy for projects (bio, write-ups, Vogue Scandinavia and The North Face) came from Fanny's old Webflow site, saved in her Claude doc "fannylivijn.com — Site Copy"; its images live on cdn.prod.website-files.com but the URLs weren't saved (only the Vogue one was known).
 - **Project pages**: Spotify (cover + 3 YouTube Shorts from Fanny's Webflow site "fanny-pack", still live in Webflow), TIER (cover + 3 vertical clips), The North Face (Vimeo film, not verifiable from here because Vimeo blocks automated browsers), Way Out West and Zara Larsson have a `gallery` (YouTube embed of the music video + two film photos from Zara's Instagram post C3NiMVsNUPJ, added 2026-10-28). Gallery items can be `image`, `video` or `embed` (YouTube/Vimeo, use `size: "wide"` to span both columns, `size: "third"` for three in a row; TikTok `https://www.tiktok.com/player/v1/VIDEO_ID` embeds show vertical 9:16). Projects can set `text` (paragraphs, `**bold**`), `client` and `year`, shown under the header.
 - Unused files kept on purpose: `images/elle-magazine.jpg`, `images/robyn-sexistential.jpg` (earlier photos Fanny may reuse).
