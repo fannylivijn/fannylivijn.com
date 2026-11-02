@@ -151,7 +151,7 @@ export const projects = [
     text: ["Stylist assistant for Maria Barsoum."],
   },
   {
-    image: "images/project-8.svg",
+    image: "images/tnf-everyday-explorer-tile.jpg",
     caption: "The North Face — The Everyday Explorer, copywriting",
     title: "The North Face — The Everyday Explorer",
     services: ["Copywriting"],
