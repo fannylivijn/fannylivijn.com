@@ -327,8 +327,9 @@ figcaption .project-link:hover {
   border: 0;
 }
 
-/* TikTok videos are vertical. */
-.case-embed--vertical {
+/* TikTok videos, YouTube Shorts and `vertical: true` clips are 9:16. */
+.case-embed--vertical,
+.case-media.project-video.case-media--vertical {
   aspect-ratio: 9 / 16;
 }
 

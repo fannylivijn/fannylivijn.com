@@ -124,7 +124,7 @@ export const projects = [
     services: ["Stylist assistant to Naomi Itkes"],
   },
   {
-    image: "images/project-6.svg",
+    image: "images/tier-tile.jpg",
     caption: "TIER — Conceptualization, content direction and social media strategy",
     title: "TIER — The Zoologists",
     services: ["Content", "Strategy"],
@@ -133,6 +133,12 @@ export const projects = [
     text: [
       "To stand out from competitors, TIER set out to spotlight its commitment to sustainability in a fresh, unconventional way. For the launch of its TikTok channel, we crafted a content strategy built around four distinct personas, quirky zoologists based in different cities.",
       "Through their lens, everyday human habits were reimagined as animal behaviors, turning sustainability into something both relatable and entertaining.",
+    ],
+    gallery: [
+      { image: "images/tier-cover.jpg", caption: "The Zoologists", size: "wide" },
+      { video: "videos/tier-1.mp4", image: "images/tier-1-poster.jpg", vertical: true, caption: "TikTok episode 1", size: "third" },
+      { video: "videos/tier-2.mp4", image: "images/tier-2-poster.jpg", vertical: true, caption: "TikTok episode 2", size: "third" },
+      { video: "videos/tier-3.mp4", image: "images/tier-3-poster.jpg", vertical: true, caption: "TikTok episode 3", size: "third" },
     ],
   },
   {
@@ -154,6 +160,9 @@ export const projects = [
     text: [
       "In order to engage and motivate the upcoming generation of outdoor enthusiasts, we developed a gamified extension to Google Maps. This feature provides tailored recommendations for destinations to explore, while enabling users to accumulate reward points for their adventures. Reward points which could be redeemed in The North Face store for discounts.",
       "**Awarded Gold at The One Show Young Ones.**",
+    ],
+    gallery: [
+      { embed: "https://player.vimeo.com/video/883782930?dnt=1", caption: "The Everyday Explorer case film", size: "wide" },
     ],
   },
 ];

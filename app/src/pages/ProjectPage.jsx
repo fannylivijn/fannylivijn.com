@@ -63,7 +63,7 @@ export default function ProjectPage() {
               />
             ) : item.video ? (
               <ProjectVideo
-                className="case-media"
+                className={`case-media${item.vertical ? " case-media--vertical" : ""}`}
                 src={item.video}
                 poster={item.image}
                 label={item.caption || project.title}
