@@ -50,7 +50,7 @@ Still placeholder, to fill in when Fanny sends content:
 ## Domain: fannylivijn.com
 
 - Connected to GitHub Pages on 2026-10-01: A records `@` → 185.199.108.153 / .109 / .110 / .111.153 and CNAME `www` → `fannylivijn.github.io`; the custom domain is set in the repo's Settings → Pages.
-- Transferred from Cargo to **Porkbun** (done by 2026-11-02, expires 2027-11-12). WHOIS still lists Cargo's nameservers (`ns1/ns2.cargo.site`), which still answer for now. Next step: in Porkbun switch the nameservers to Cloudflare (`armfazh.ns.cloudflare.com` / `paris.ns.cloudflare.com`; that zone already has the same records, DNS only).
+- Registered at **Porkbun** (moved from Cargo, expires 2027-11-12, auto-renew on). Since 2026-11-02 it uses Porkbun's nameservers and DNS (4 A records + `www` CNAME → `fannylivijn.github.io`); edit DNS at Porkbun → Domain Management → DNS. The old Cloudflare zone is unused.
 
 ## Deployment
 
