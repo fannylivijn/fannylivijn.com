@@ -35,7 +35,7 @@ export const clients = [
   { name: "Ann-Sofie Back – Go As You Please Exhibition x Liljevalchs", image: "images/ann-sofie-back.jpg" },
   { name: "TIER", image: "images/client-2.svg" },
   { name: "Shore Studio Series" },
-  { name: "The North Face x One Show Club", image: "images/tnf-everyday-explorer-tile.jpg" },
+  { name: "The North Face x One Show Club", image: "images/tnf-everyday-explorer-thumb.jpg" },
   { name: "Petra Fagerström x SFC Presentation", image: "images/petra-fagerstrom-sfc.jpg" },
   { name: "Robyn x H&M Rabanne Collection", video: "videos/robyn-hm-rabanne.mp4" },
   { name: "Arket" },
