@@ -17,7 +17,7 @@ export const clients = [
   { name: "Tinder" },
   { name: "Zara Larsson – You Love Who You Love", image: "images/zara-larsson.jpg" },
   { name: "Lofted Spirits" },
-  { name: "Prune Imports", image: "images/client-3.svg" },
+  { name: "Prune Imports" },
   { name: "Bardstown" },
   { name: "Green River" },
   { name: "Way Out West Festival x Yung Lean", image: "images/way-out-west.jpg" },
