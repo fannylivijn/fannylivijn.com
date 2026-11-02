@@ -53,7 +53,7 @@ export default function ProjectPage() {
           <figure key={i} className={`case-item case-item--${item.size || "large"}`}>
             {item.embed ? (
               <iframe
-                className={`case-media case-embed${item.embed.includes("tiktok.com") ? " case-embed--vertical" : ""}`}
+                className={`case-media case-embed${item.vertical || item.embed.includes("tiktok.com") ? " case-embed--vertical" : ""}`}
                 src={item.embed}
                 title={item.caption || project.title}
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture"

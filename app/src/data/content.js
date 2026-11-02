@@ -56,13 +56,14 @@ export const clients = [
 //     { embed: "https://www.youtube-nocookie.com/embed/VIDEO_ID", size: "wide" },
 //   ]                                         size is "large", "small", "third" or "wide"
 //                                             (third = three in a row; wide spans both columns, for
-//                                             YouTube/Vimeo embeds)
+//                                             YouTube/Vimeo embeds; add vertical: true for
+//                                             YouTube Shorts — TikTok is vertical already)
 //   text: ["Paragraph", "Paragraph"]          the write-up under the header; wrap
 //                                             words in **double stars** for bold
 //   client: "Name", year: "2023"              shown in a line under the text
 export const projects = [
   {
-    image: "images/project-1.svg",
+    image: "images/spotify-what-floats-ur-boat-tile.jpg",
     caption: "Spotify Sweden — Conceptualization, content direction and social media strategy for TikTok channel",
     title: "Spotify Sweden — What Floats Ur Boat?",
     services: ["Creative", "Art direction", "TikTok strategy"],
@@ -71,6 +72,12 @@ export const projects = [
     text: [
       "When Spotify Sweden set out to make waves on TikTok, we knew we had to break through with something Gen Z wouldn’t scroll past. Instead of leaning on the standard Q&A interview format, we gave it a bold twist. A trampoline boat drifting across a pond at the Way Out West Festival. At the helm was Swedish TikTok star Annie Samuelsson, steering guests like Bianca Ingrosso and Edvin Ryding through playful, unpredictable interviews.",
       "Within the first week, the channel racked up **20,000 organic followers** and more than **3 million views**, firmly anchoring Spotify’s TikTok presence with a splash.",
+    ],
+    gallery: [
+      { image: "images/spotify-what-floats-ur-boat.jpg", caption: "What Floats Ur Boat? at Way Out West Festival", size: "wide" },
+      { embed: "https://www.youtube-nocookie.com/embed/7AVVgjAhEis", vertical: true, caption: "With Edvin Ryding", size: "third" },
+      { embed: "https://www.youtube-nocookie.com/embed/PXLUnF7J7KI", vertical: true, caption: "With Bianca Ingrosso & Alice Stenlöf, part 2", size: "third" },
+      { embed: "https://www.youtube-nocookie.com/embed/Mle56GvEopI", vertical: true, caption: "With Bianca Ingrosso & Alice Stenlöf, part 1", size: "third" },
     ],
   },
   {
