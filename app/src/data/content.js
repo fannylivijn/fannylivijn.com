@@ -124,7 +124,7 @@ export const projects = [
     services: ["Stylist assistant to Naomi Itkes"],
   },
   {
-    image: "images/tier-tile.jpg",
+    image: "images/tier-zoologists-tile.jpg",
     caption: "TIER — Conceptualization, content direction and social media strategy",
     title: "TIER — The Zoologists",
     services: ["Content", "Strategy"],
