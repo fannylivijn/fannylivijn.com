@@ -63,7 +63,7 @@ export const clients = [
 //   client: "Name", year: "2023"              shown in a line under the text
 export const projects = [
   {
-    image: "images/spotify-edvin-corners-tile.jpg",
+    image: "images/spotify-edvin-tile-v2.jpg",
     caption: "Spotify Sweden — Conceptualization, content direction and social media strategy for TikTok channel",
     title: "Spotify Sweden — What Floats Ur Boat?",
     services: ["Creative", "Art direction", "TikTok strategy"],
