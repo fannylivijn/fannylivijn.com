@@ -98,7 +98,6 @@ export const projects = [
       { image: "images/zara-larsson-leather.jpg", caption: "Behind the scenes", size: "small" },
     ],
   },
-  { image: "images/coming-soon.svg", caption: "Prune Imports — Website design and brand development" },
   {
     image: "images/way-out-west-yung-lean-poster.jpg",
     caption: "Way Out West Festival x Yung Lean — Conceptualization and social media strategy",
@@ -176,6 +175,11 @@ export const projects = [
     gallery: [
       { embed: "https://player.vimeo.com/video/883782930?dnt=1", caption: "The Everyday Explorer case film", size: "wide" },
     ],
+  },
+  {
+    image: "images/coming-soon.svg",
+    caption: "Prune Imports — Website design and brand development (coming soon)",
+    services: ["Website design and brand development"],
   },
 ];
 
