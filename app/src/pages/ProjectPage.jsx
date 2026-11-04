@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import ProjectVideo from "../components/ProjectVideo.jsx";
 import { findProject } from "../data/projectInfo.js";
@@ -11,6 +12,26 @@ function richText(text) {
 // on the left and Services / With on the right, then a two-column collage of media.
 export default function ProjectPage() {
   const { slug } = useParams();
+
+  // Instagram embeds report their real height; size the iframe to match.
+  useEffect(() => {
+    function onMessage(event) {
+      if (!String(event.origin).includes("instagram.com")) return;
+      let data = event.data;
+      try {
+        if (typeof data === "string") data = JSON.parse(data);
+      } catch {
+        return;
+      }
+      if (data?.type !== "MEASURE" || !data.details?.height) return;
+      for (const frame of document.querySelectorAll(".case-embed--instagram")) {
+        if (frame.contentWindow === event.source) frame.style.height = `${data.details.height}px`;
+      }
+    }
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
+
   const found = findProject(slug);
   if (!found) return <Navigate to="/projects" replace />;
   const { project, prev, next } = found;
@@ -53,7 +74,13 @@ export default function ProjectPage() {
           <figure key={i} className={`case-item case-item--${item.size || "large"}`}>
             {item.embed ? (
               <iframe
-                className={`case-media case-embed${item.vertical || item.embed.includes("tiktok.com") ? " case-embed--vertical" : ""}`}
+                className={`case-media case-embed${
+                  item.embed.includes("instagram.com")
+                    ? " case-embed--instagram"
+                    : item.vertical || item.embed.includes("tiktok.com")
+                      ? " case-embed--vertical"
+                      : ""
+                }`}
                 src={item.embed}
                 title={item.caption || project.title}
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture"

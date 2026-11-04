@@ -122,6 +122,10 @@ export const projects = [
     caption: "Robyn — Sexistential Album, stylist assistant to Naomi Itkes",
     title: "Robyn — Sexistential Album",
     services: ["Stylist assistant to Naomi Itkes"],
+    gallery: [
+      { embed: "https://www.instagram.com/p/DVyw_ctjels/embed/", caption: "“Blow My Mind” music video, via Young", size: "large" },
+      { embed: "https://www.youtube-nocookie.com/embed/uzf2OP1mvHY", caption: "“Sucker For Love” lyric video", size: "large" },
+    ],
   },
   {
     image: "images/tier-zoologists-tile.jpg",

@@ -333,6 +333,12 @@ figcaption .project-link:hover {
   aspect-ratio: 9 / 16;
 }
 
+/* Instagram embeds add a header and footer around the video. This is only the starting
+   size: ProjectPage sets the exact height Instagram reports once the embed loads. */
+.case-embed--instagram {
+  aspect-ratio: 10 / 17;
+}
+
 .case-item figcaption {
   margin-top: 8px;
   font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
