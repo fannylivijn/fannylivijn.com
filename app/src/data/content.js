@@ -124,6 +124,12 @@ export const projects = [
     services: ["Stylist assistant to Naomi Itkes"],
     gallery: [
       { image: "images/robyn-sexistential-casper-sejersen.jpg", caption: "Sexistential, photo by Casper Sejersen", size: "wide" },
+      { image: "images/robyn-motorbike-casper-sejersen.jpg", caption: "Sexistential, photo by Casper Sejersen", size: "wide" },
+      { image: "images/robyn-rolling-stone-cover.jpg", caption: "Rolling Stone Italia cover, photo by Casper Sejersen", size: "large" },
+      { image: "images/robyn-rolling-stone-1.jpg", caption: "Rolling Stone Italia, photo by Casper Sejersen", size: "large" },
+      { image: "images/robyn-rolling-stone-2.jpg", caption: "Rolling Stone Italia, photo by Casper Sejersen", size: "large" },
+      { image: "images/robyn-rolling-stone-3.jpg", caption: "Rolling Stone Italia, photo by Casper Sejersen", size: "large" },
+      { image: "images/robyn-rolling-stone-4.jpg", caption: "Rolling Stone Italia, photo by Casper Sejersen", size: "large" },
       { embed: "https://www.instagram.com/p/DVyw_ctjels/embed/", caption: "“Blow My Mind” music video, via Young", size: "large" },
       { embed: "https://www.youtube-nocookie.com/embed/uzf2OP1mvHY", caption: "“Sucker For Love” lyric video", size: "large" },
       { embed: "https://www.youtube-nocookie.com/embed/ek9fD-EIpww", caption: "“Light Up” lyric video", size: "large" },
