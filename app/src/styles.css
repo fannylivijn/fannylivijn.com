@@ -339,6 +339,15 @@ figcaption .project-link:hover {
   aspect-ratio: 10 / 17;
 }
 
+/* A tall Instagram embed spans two rows so the next items stack beside it. */
+.case-item:has(.case-embed--instagram) {
+  grid-row: span 2;
+}
+
+.case-gallery:has(.case-embed--instagram) {
+  grid-template-rows: min-content 1fr;
+}
+
 .case-item figcaption {
   margin-top: 8px;
   font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -548,8 +557,14 @@ figcaption .project-link:hover {
     grid-template-columns: 1fr;
   }
 
-  .case-item {
+  .case-item,
+  .case-item:has(.case-embed--instagram) {
     grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .case-gallery:has(.case-embed--instagram) {
+    grid-template-rows: none;
   }
 
   .case-header {

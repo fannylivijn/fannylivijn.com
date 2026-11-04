@@ -125,6 +125,7 @@ export const projects = [
     gallery: [
       { embed: "https://www.instagram.com/p/DVyw_ctjels/embed/", caption: "“Blow My Mind” music video, via Young", size: "large" },
       { embed: "https://www.youtube-nocookie.com/embed/uzf2OP1mvHY", caption: "“Sucker For Love” lyric video", size: "large" },
+      { embed: "https://www.youtube-nocookie.com/embed/ek9fD-EIpww", caption: "“Light Up” lyric video", size: "large" },
     ],
   },
   {
