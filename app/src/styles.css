@@ -65,6 +65,23 @@ img {
   font-style: italic;
 }
 
+/* Hand-drawn "Fanny" logo in place of the name. */
+.nav__logo {
+  display: block;
+  line-height: 0;
+}
+
+.nav__logo img {
+  display: block;
+  height: 40px;
+  width: auto;
+  mix-blend-mode: multiply;
+}
+
+.nav:not(.nav--vertical) {
+  align-items: center;
+}
+
 .nav--vertical {
   position: absolute;
   z-index: 5;
@@ -518,7 +535,12 @@ figcaption .project-link:hover {
     position: static;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     margin-bottom: 40px;
+  }
+
+  .nav__logo img {
+    height: 32px;
   }
 
   .intro {

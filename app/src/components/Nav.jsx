@@ -5,7 +5,9 @@ import { profile } from "../data/content.js";
 export default function Nav({ vertical }) {
   return (
     <nav className={vertical ? "nav nav--vertical" : "nav"}>
-      <NavLink to="/" end>{profile.name}</NavLink>
+      <NavLink to="/" end className="nav__logo" aria-label={profile.name}>
+        <img src="images/logo-fanny.jpg" alt={profile.name} />
+      </NavLink>
       <NavLink to="/projects">Selected projects</NavLink>
       <NavLink to="/services">Creative services</NavLink>
       <NavLink to="/reel">BTS reel</NavLink>
