@@ -42,8 +42,22 @@ function ClientThumb({ client }) {
   return null;
 }
 
-// Nudges texts placed `near` a brand sideways so they never run off the page edge.
-function keepNearNotesOnScreen() {
+// Makes the space under the bio exactly as tall as the lowest (tilted) text needs,
+// so the brand list sits just below it, and nudges texts placed `near` a brand
+// sideways so they never run off the page edge.
+function layoutNotes() {
+  const area = document.querySelector(".tagline-notes");
+  if (area) {
+    area.style.height = "";
+    if (getComputedStyle(area).position === "relative") {
+      const top = area.getBoundingClientRect().top;
+      const bottoms = [...area.querySelectorAll(".tagline-note")]
+        .filter((note) => getComputedStyle(note).position === "absolute")
+        .map((note) => note.getBoundingClientRect().bottom - top);
+      if (bottoms.length) area.style.height = `${Math.max(...bottoms) + 10}px`;
+    }
+  }
+
   const gutter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--gutter")) || 0;
   document.querySelectorAll(".tagline-note--near").forEach((note) => {
     const pageWidth = document.documentElement.clientWidth;
@@ -60,10 +74,10 @@ export default function Home() {
   const [active, setActive] = useState(null);
 
   useLayoutEffect(() => {
-    keepNearNotesOnScreen();
-    document.fonts?.ready.then(keepNearNotesOnScreen);
-    window.addEventListener("resize", keepNearNotesOnScreen);
-    return () => window.removeEventListener("resize", keepNearNotesOnScreen);
+    layoutNotes();
+    document.fonts?.ready.then(layoutNotes);
+    window.addEventListener("resize", layoutNotes);
+    return () => window.removeEventListener("resize", layoutNotes);
   }, []);
 
   return (

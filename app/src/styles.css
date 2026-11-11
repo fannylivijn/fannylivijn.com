@@ -124,10 +124,10 @@ img {
 }
 
 /* The pop-ups float in the empty space under the bio, placed from the page's left edge. */
-/* Tall enough to hold every text, so none of them can reach the brand list. */
+/* Its height is set by layoutNotes() in Home.jsx to fit the lowest text. */
 .tagline-notes {
   position: relative;
-  height: 440px;
+  height: 300px;
 }
 
 .tagline-note {
@@ -603,26 +603,27 @@ figcaption .project-link:hover {
     margin-left: 0;
   }
 
-  /* On phones the hidden texts stack under the bio; tap a spot (or a word) to show it. */
+  /* On phones the texts share one spot under the bio: tap a tagline word to show
+     its text there. The space is as tall as the longest text (set in Home.jsx). */
   .tagline-notes {
-    height: auto;
     margin-top: 16px;
   }
 
-  .tagline-note--near {
-    left: 0;
-    width: min(300px, 80vw);
-  }
-
-  /* Gentler tilt on phones so the stacked texts don't bump into each other. */
   .tagline-note {
     rotate: calc(var(--tilt, 0deg) * 0.3);
   }
 
   .tagline-note:not(.tagline-note--near) {
-    position: static;
+    left: 0;
+    top: 0 !important; /* overrides each text's desktop `top` */
     width: 100%;
-    padding: 16px 0;
+    padding: 8px 0;
+    pointer-events: none;
+  }
+
+  .tagline-note--near {
+    left: 0;
+    width: min(300px, 80vw);
   }
 
   .clients {

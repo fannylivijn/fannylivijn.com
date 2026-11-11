@@ -15,7 +15,9 @@ export const profile = {
 // `left` / `top` place the text (left as % of the page width, top in px below the bio).
 // Or set `near: "Brand name"` instead to hide the text just below-left of that brand
 // in the brand list. `tilt` turns the text, in degrees (minus tilts it up to the
-// right, plus down to the right; leave it out for straight). Delete an entry to remove its pop-up; the word then stays as plain text.
+// right, plus down to the right; leave it out for straight). The brand list moves
+// down just enough to clear the lowest text. Delete an entry to remove its pop-up;
+// the word then stays as plain text.
 export const taglineNotes = [
   {
     word: "Creative",
@@ -32,29 +34,29 @@ export const taglineNotes = [
   {
     word: "Art Director",
     text: "Shaping how an idea looks and feels, from casting and styling to the last frame of the edit.",
-    tilt: 14,
+    tilt: 8,
     left: "70%",
-    top: "45px",
+    top: "25px",
   },
   {
     word: "Music",
     text: "Artist campaigns, album rollouts and festival content for Spotify, Robyn, Zara Larsson and Way Out West.",
     tilt: -4,
-    left: "8%",
-    top: "170px",
+    left: "3%",
+    top: "115px",
   },
   {
     word: "Fashion",
     text: "Editorial and brand work for Vogue Scandinavia, ELLE, H&M, Arket and Shopbop.",
-    left: "40%",
-    top: "200px",
+    left: "36%",
+    top: "120px",
   },
   {
     word: "Socials",
     text: "Turning social moments into brand movements: TikTok, Reels and Shorts made for the feed, not adapted to it.",
-    tilt: -20,
-    left: "72%",
-    top: "235px",
+    tilt: -12,
+    left: "68%",
+    top: "165px",
   },
 ];
 
