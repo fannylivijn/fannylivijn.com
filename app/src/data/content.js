@@ -8,6 +8,49 @@ export const profile = {
   clientsIntro: "Brands and projects I’ve worked with:",
 };
 
+// Pop-up texts on the home page: hovering a word in the tagline above shows its
+// grey text in the empty space below the bio. `word` must match the tagline exactly.
+// `left` / `top` place the text (left as % of the page width, top in px below the bio).
+// Delete an entry to remove its pop-up; the word then stays as plain text.
+export const taglineNotes = [
+  {
+    word: "Creative",
+    text: "Ideas first, formats second. I look for the cultural moment a brand can belong to, and build the concept from there.",
+    left: "10%",
+    top: "60px",
+  },
+  {
+    word: "Content Strategist",
+    text: "Before content comes context. Knowing where people already are, what they talk about and why, so every post has a reason to exist.",
+    left: "52%",
+    top: "110px",
+  },
+  {
+    word: "Art Director",
+    text: "Shaping how an idea looks and feels, from casting and styling to the last frame of the edit.",
+    left: "25%",
+    top: "150px",
+  },
+  {
+    word: "Music",
+    text: "Artist campaigns, album rollouts and festival content for Spotify, Robyn, Zara Larsson and Way Out West.",
+    left: "45%",
+    top: "40px",
+  },
+  {
+    word: "Fashion",
+    text: "Editorial and brand work for Vogue Scandinavia, ELLE, H&M, Arket and Shopbop.",
+    left: "15%",
+    top: "120px",
+  },
+  {
+    word: "Socials",
+    text: "Turning social moments into brand movements: TikTok, Reels and Shorts made for the feed, not adapted to it.",
+    left: "55%",
+    top: "80px",
+  },
+];
+
 // Add `image: "images/some-file.jpg"` to a client to show a small thumbnail
 // before its name (hover zooms it). Clients without one render as text only.
 // Add `video: "videos/some-clip.mp4"` for a silent looping video thumbnail instead

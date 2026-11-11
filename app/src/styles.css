@@ -113,6 +113,37 @@ img {
   color: var(--muted);
 }
 
+/* Tagline words that show a grey pop-up text on hover (see taglineNotes in content.js). */
+.tagline-word {
+  cursor: default;
+  outline: none;
+}
+
+.tagline-word.is-active {
+  font-style: italic;
+}
+
+/* The pop-ups float in the empty space under the bio, placed from the page's left edge. */
+.tagline-notes {
+  position: relative;
+  height: 0;
+  pointer-events: none;
+}
+
+.tagline-note {
+  --width: min(480px, 42%);
+  position: absolute;
+  left: min(var(--left), 100% - var(--width));
+  width: var(--width);
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.tagline-note.is-visible {
+  opacity: 1;
+}
+
 .clients {
   margin-top: auto;
   padding-top: 200px;
@@ -547,8 +578,15 @@ figcaption .project-link:hover {
     margin-left: 0;
   }
 
+  /* On phones a tapped word's text appears full width just under the bio. */
+  .tagline-note {
+    --width: 100%;
+    left: 0;
+    top: 24px !important;
+  }
+
   .clients {
-    padding-top: 80px;
+    padding-top: 150px;
     line-height: 54px;
   }
 
