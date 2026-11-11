@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useLayoutEffect, useState } from "react";
 import { profile, clients, taglineNotes } from "../data/content.js";
 
 // Splits the tagline into plain text and hoverable words (those listed in taglineNotes).
@@ -42,8 +42,28 @@ function ClientThumb({ client }) {
   return null;
 }
 
+// Nudges texts placed `near` a brand sideways so they never run off the page edge.
+function keepNearNotesOnScreen() {
+  const gutter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--gutter")) || 0;
+  document.querySelectorAll(".tagline-note--near").forEach((note) => {
+    note.style.translate = "0";
+    const box = note.getBoundingClientRect();
+    let shift = 0;
+    if (box.right > window.innerWidth - gutter) shift = window.innerWidth - gutter - box.right;
+    if (box.left + shift < gutter) shift = gutter - box.left;
+    note.style.translate = `${shift}px 0`;
+  });
+}
+
 export default function Home() {
   const [active, setActive] = useState(null);
+
+  useLayoutEffect(() => {
+    keepNearNotesOnScreen();
+    document.fonts?.ready.then(keepNearNotesOnScreen);
+    window.addEventListener("resize", keepNearNotesOnScreen);
+    return () => window.removeEventListener("resize", keepNearNotesOnScreen);
+  }, []);
 
   return (
     <>
@@ -72,16 +92,18 @@ export default function Home() {
       </section>
 
       <div className="tagline-notes" aria-live="polite">
-          {taglineNotes.map((note, i) => (
-            <p
-              key={note.word}
-              className={"tagline-note" + (active === i ? " is-visible" : "")}
-              tabIndex={0}
-              style={{ "--left": note.left, top: note.top }}
-            >
-              {note.text}
-            </p>
-          ))}
+          {taglineNotes.map((note, i) =>
+            note.near ? null : (
+              <p
+                key={note.word}
+                className={"tagline-note" + (active === i ? " is-visible" : "")}
+                tabIndex={0}
+                style={{ "--left": note.left, top: note.top }}
+              >
+                {note.text}
+              </p>
+            )
+          )}
       </div>
 
       <section className="clients">
@@ -92,6 +114,17 @@ export default function Home() {
               <ClientThumb client={client} />
               {client.name}
               {i < clients.length - 1 ? "," : ""}
+              {taglineNotes.map((note, n) =>
+                note.near === client.name ? (
+                  <span
+                    key={note.word}
+                    className={"tagline-note tagline-note--near" + (active === n ? " is-visible" : "")}
+                    tabIndex={0}
+                  >
+                    {note.text}
+                  </span>
+                ) : null
+              )}
             </>
           );
           return (

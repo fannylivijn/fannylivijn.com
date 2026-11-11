@@ -13,13 +13,13 @@ export const profile = {
 // spot and fades in when the mouse passes over it (like andreamena.com), so keep
 // the spots apart so they don't overlap. `word` must match the tagline exactly.
 // `left` / `top` place the text (left as % of the page width, top in px below the bio).
-// Delete an entry to remove its pop-up; the word then stays as plain text.
+// Or set `near: "Brand name"` instead to hide the text just below-left of that brand
+// in the brand list. Delete an entry to remove its pop-up; the word then stays as plain text.
 export const taglineNotes = [
   {
     word: "Creative",
     text: "Ideas first, formats second. I look for the cultural moment a brand can belong to, and build the concept from there.",
-    left: "4%",
-    top: "20px",
+    near: "Shopbop",
   },
   {
     word: "Content Strategist",

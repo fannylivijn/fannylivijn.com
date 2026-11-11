@@ -124,9 +124,10 @@ img {
 }
 
 /* The pop-ups float in the empty space under the bio, placed from the page's left edge. */
+/* Tall enough to hold every text, so none of them can reach the brand list. */
 .tagline-notes {
   position: relative;
-  height: 0;
+  height: 340px;
 }
 
 .tagline-note {
@@ -143,6 +144,15 @@ img {
   transition: opacity 250ms ease;
 }
 
+/* A text tucked just below-left of a brand name (`near` in content.js). */
+.tagline-note--near {
+  left: -90px;
+  top: calc(100% + 18px);
+  width: 380px;
+  line-height: 1.3;
+  white-space: normal;
+}
+
 /* Hidden until you hover (or tap) its own spot, or the matching tagline word. */
 .tagline-note:hover,
 .tagline-note:focus,
@@ -152,7 +162,8 @@ img {
 
 .clients {
   margin-top: auto;
-  padding-top: 200px;
+  padding-top: 20px;
+  padding-bottom: 110px; /* room for a text placed `near` the last brand, above the contact links */
   line-height: 68px;
 }
 
@@ -597,7 +608,12 @@ figcaption .project-link:hover {
     margin-top: 16px;
   }
 
-  .tagline-note {
+  .tagline-note--near {
+    left: 0;
+    width: min(300px, 80vw);
+  }
+
+  .tagline-note:not(.tagline-note--near) {
     position: static;
     width: 100%;
     padding: 8px 0;
