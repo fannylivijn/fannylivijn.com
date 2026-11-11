@@ -76,6 +76,7 @@ export default function Home() {
             <p
               key={note.word}
               className={"tagline-note" + (active === i ? " is-visible" : "")}
+              tabIndex={0}
               style={{ "--left": note.left, top: note.top }}
             >
               {note.text}

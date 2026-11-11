@@ -9,45 +9,47 @@ export const profile = {
 };
 
 // Pop-up texts on the home page: hovering a word in the tagline above shows its
-// grey text in the empty space below the bio. `word` must match the tagline exactly.
+// grey text in the empty space below the bio. Each text is also hidden in its own
+// spot and fades in when the mouse passes over it (like andreamena.com), so keep
+// the spots apart so they don't overlap. `word` must match the tagline exactly.
 // `left` / `top` place the text (left as % of the page width, top in px below the bio).
 // Delete an entry to remove its pop-up; the word then stays as plain text.
 export const taglineNotes = [
   {
     word: "Creative",
     text: "Ideas first, formats second. I look for the cultural moment a brand can belong to, and build the concept from there.",
-    left: "10%",
-    top: "60px",
+    left: "4%",
+    top: "20px",
   },
   {
     word: "Content Strategist",
     text: "Before content comes context. Knowing where people already are, what they talk about and why, so every post has a reason to exist.",
-    left: "52%",
-    top: "110px",
+    left: "37%",
+    top: "0px",
   },
   {
     word: "Art Director",
     text: "Shaping how an idea looks and feels, from casting and styling to the last frame of the edit.",
-    left: "25%",
-    top: "150px",
+    left: "70%",
+    top: "40px",
   },
   {
     word: "Music",
     text: "Artist campaigns, album rollouts and festival content for Spotify, Robyn, Zara Larsson and Way Out West.",
-    left: "45%",
-    top: "40px",
+    left: "8%",
+    top: "170px",
   },
   {
     word: "Fashion",
     text: "Editorial and brand work for Vogue Scandinavia, ELLE, H&M, Arket and Shopbop.",
-    left: "15%",
-    top: "120px",
+    left: "40%",
+    top: "200px",
   },
   {
     word: "Socials",
     text: "Turning social moments into brand movements: TikTok, Reels and Shorts made for the feed, not adapted to it.",
-    left: "55%",
-    top: "80px",
+    left: "72%",
+    top: "160px",
   },
 ];
 

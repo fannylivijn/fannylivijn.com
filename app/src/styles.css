@@ -127,19 +127,25 @@ img {
 .tagline-notes {
   position: relative;
   height: 0;
-  pointer-events: none;
 }
 
 .tagline-note {
-  --width: min(480px, 42%);
+  --width: min(380px, 28%);
   position: absolute;
   left: min(var(--left), 100% - var(--width));
   width: var(--width);
   color: var(--muted);
+  margin: 0;
+  padding: 12px 0;
   opacity: 0;
+  outline: none;
+  cursor: default;
   transition: opacity 250ms ease;
 }
 
+/* Hidden until you hover (or tap) its own spot, or the matching tagline word. */
+.tagline-note:hover,
+.tagline-note:focus,
 .tagline-note.is-visible {
   opacity: 1;
 }
@@ -152,6 +158,13 @@ img {
 
 .clients-intro {
   margin-right: 12px;
+}
+
+/* Brand names sit above the hidden pop-up texts so they stay clickable. */
+.clients-intro,
+.client {
+  position: relative;
+  z-index: 1;
 }
 
 .client {
@@ -578,15 +591,20 @@ figcaption .project-link:hover {
     margin-left: 0;
   }
 
-  /* On phones a tapped word's text appears full width just under the bio. */
+  /* On phones the hidden texts stack under the bio; tap a spot (or a word) to show it. */
+  .tagline-notes {
+    height: auto;
+    margin-top: 16px;
+  }
+
   .tagline-note {
-    --width: 100%;
-    left: 0;
-    top: 24px !important;
+    position: static;
+    width: 100%;
+    padding: 8px 0;
   }
 
   .clients {
-    padding-top: 150px;
+    padding-top: 60px;
     line-height: 54px;
   }
 
