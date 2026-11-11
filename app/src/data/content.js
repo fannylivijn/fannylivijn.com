@@ -14,11 +14,13 @@ export const profile = {
 // the spots apart so they don't overlap. `word` must match the tagline exactly.
 // `left` / `top` place the text (left as % of the page width, top in px below the bio).
 // Or set `near: "Brand name"` instead to hide the text just below-left of that brand
-// in the brand list. Delete an entry to remove its pop-up; the word then stays as plain text.
+// in the brand list. `tilt` turns the text, in degrees (minus tilts it up to the
+// right, plus down to the right; leave it out for straight). Delete an entry to remove its pop-up; the word then stays as plain text.
 export const taglineNotes = [
   {
     word: "Creative",
     text: "Ideas first, formats second. I look for the cultural moment a brand can belong to, and build the concept from there.",
+    tilt: -6,
     near: "Shopbop",
   },
   {
@@ -30,12 +32,14 @@ export const taglineNotes = [
   {
     word: "Art Director",
     text: "Shaping how an idea looks and feels, from casting and styling to the last frame of the edit.",
+    tilt: 14,
     left: "70%",
-    top: "40px",
+    top: "45px",
   },
   {
     word: "Music",
     text: "Artist campaigns, album rollouts and festival content for Spotify, Robyn, Zara Larsson and Way Out West.",
+    tilt: -4,
     left: "8%",
     top: "170px",
   },
@@ -48,8 +52,9 @@ export const taglineNotes = [
   {
     word: "Socials",
     text: "Turning social moments into brand movements: TikTok, Reels and Shorts made for the feed, not adapted to it.",
+    tilt: -20,
     left: "72%",
-    top: "160px",
+    top: "235px",
   },
 ];
 

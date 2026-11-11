@@ -127,7 +127,7 @@ img {
 /* Tall enough to hold every text, so none of them can reach the brand list. */
 .tagline-notes {
   position: relative;
-  height: 340px;
+  height: 440px;
 }
 
 .tagline-note {
@@ -141,6 +141,7 @@ img {
   opacity: 0;
   outline: none;
   cursor: default;
+  rotate: var(--tilt, 0deg); /* `tilt` in content.js */
   transition: opacity 250ms ease;
 }
 
@@ -613,10 +614,15 @@ figcaption .project-link:hover {
     width: min(300px, 80vw);
   }
 
+  /* Gentler tilt on phones so the stacked texts don't bump into each other. */
+  .tagline-note {
+    rotate: calc(var(--tilt, 0deg) * 0.3);
+  }
+
   .tagline-note:not(.tagline-note--near) {
     position: static;
     width: 100%;
-    padding: 8px 0;
+    padding: 16px 0;
   }
 
   .clients {

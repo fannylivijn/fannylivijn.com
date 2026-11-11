@@ -46,10 +46,11 @@ function ClientThumb({ client }) {
 function keepNearNotesOnScreen() {
   const gutter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--gutter")) || 0;
   document.querySelectorAll(".tagline-note--near").forEach((note) => {
+    const pageWidth = document.documentElement.clientWidth;
     note.style.translate = "0";
     const box = note.getBoundingClientRect();
     let shift = 0;
-    if (box.right > window.innerWidth - gutter) shift = window.innerWidth - gutter - box.right;
+    if (box.right > pageWidth - gutter) shift = pageWidth - gutter - box.right;
     if (box.left + shift < gutter) shift = gutter - box.left;
     note.style.translate = `${shift}px 0`;
   });
@@ -98,7 +99,7 @@ export default function Home() {
                 key={note.word}
                 className={"tagline-note" + (active === i ? " is-visible" : "")}
                 tabIndex={0}
-                style={{ "--left": note.left, top: note.top }}
+                style={{ "--left": note.left, top: note.top, "--tilt": `${note.tilt || 0}deg` }}
               >
                 {note.text}
               </p>
@@ -120,6 +121,7 @@ export default function Home() {
                     key={note.word}
                     className={"tagline-note tagline-note--near" + (active === n ? " is-visible" : "")}
                     tabIndex={0}
+                    style={{ "--tilt": `${note.tilt || 0}deg` }}
                   >
                     {note.text}
                   </span>
