@@ -628,6 +628,13 @@ figcaption .project-link:hover {
     transform: none;
   }
 
+  /* Long brand names wrap instead of sticking out past the screen edge. */
+  .client {
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
   .projects {
     grid-template-columns: 1fr;
   }
